@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Screen</title>
+  <style>
+      body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://m.economictimes.com/thumb/msid-102358835,width-1200,height-900,resizemode-4,imgsize-91098/upcoming-netflix-originals-2023-check-list-of-all-the-renewed-seasons-coming-to-streaming-giant.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      background-color: #111;
+      padding: 30px;
+      border-radius: 10px;
+      gap: 15px;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b81d24;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button onclick="start()">Enter</button>
+  </div>
+
+  <script>
+    function start() {
+      const email = document.getElementById("email").value;
+      if (email) {
+        window.location.href = "netflixindex.html";
+      } else {
+        alert("Please enter your email.");
+      }
+    }
+  </script>
+
+</body>
+</html>
